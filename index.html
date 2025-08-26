@@ -8,7 +8,53 @@
 </head>
 <body>
     <header>
-            <button>livros</button>
+        <button>autores</button>
+        <button>livros</button>
+        <button>leitores</button>
+        <button>emprestimos</button>
     </header>
+    <main>
+        <form action="create_autores.php" method="POST">
+            <div class="formulario">
+                <h1>Registrar Autor</h1>
+                <label>Nome do autor: <input type="text" name="nome_autor" required></label>
+                <label>Nacionalidade: <input type="text" name="nacionalidade_autor" required></label>
+                <label>Data de Nascimento: <input type="date" name="anonascimento" required></label>
+                <button type="submit" value="RegistrarAutor">Registrar</button>
+            </div>
+        </form>
+        <hr>
+        <form action="create_livros.php" method="POST">
+            <div class="formulario">
+                <h1>Registrar Livro</h1>
+                <label>Titulo do livro: <input type="text" name="titulo_livro" required></label>
+                <label>Genero: <input type="text" name="genero_livro" required></label>
+                <label>Ano da Publicação: <input type="date" name="anopublicacao_livro" required></label>
+                <label>ID do autor: <input type="number" name="fk_autor" required></label>
+                <button type="submit" value="RegistrarLivro">Registrar</button>
+            </div>
+        </form>
+        <hr>
+        <form action="create_leitores.php" method="POST">
+            <div class="formulario">
+                <h1>Registrar Leitor</h1>
+                <label>Nome do Leitor: <input type="text" name="nome_leitor" required></label>
+                <label>Email: <input type="email" name="email_leitor" required></label>
+                <label>Telefone: <input type="tel" name="telefone_leitor" required></label>
+                <button type="submit" value="RegistrarLeitor">Registrar</button>
+            </div>
+        </form>
+        <hr>
+        <form action="create_emprestimos.php" method="POST">
+            <div class="formulario">
+                <h1>Registrar Empréstimo</h1>
+                <label>ID do livro: <input type="number" name="fk_livro" required></label>
+                <label>ID do leitor: <input type="number" name="fk_leitor" required></label>
+                <label>Data de devolução: <input type="date" name="data_devolucao" required></label>
+                <button type="submit" value="RegistrarEmprestimo">Registrar</button>
+            </div>
+        </form>
+        <hr>
+    </main>
 </body>
 </html>
